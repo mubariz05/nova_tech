@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech - Rəqəmsal Həllər</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">NovaTech</div>
+        <nav class="nav">
+            <a href="#about">Haqqımızda</a>
+            <a href="#gallery">Qalereya</a>
+            <a href="#contact">Əlaqə</a>
+        </nav>
+        <button class="burger" id="burgerBtn">☰</button>
+    </header>
+
+    <main class="main">
+
+        <section class="hero">
+            <h1>Rəqəmsal Dünyada Sizin Güvənli Tərəfdaşınız</h1>
+            <p>Biz biznesiniz üçün ən innovativ web və mobil həlləri sıfırdan hazırlayırıq.</p>
+            <a href="#contact" class="btn-primary">Bizimlə Əlaqə</a>
+        </section>
+
+        <section id="about" class="about section">
+            <h2>Haqqımızda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Niyə bizi seçməlisiniz?</h3>
+                    <p>10 ildən artıq təcrübəmizlə layihələrinizi vaxtında və yüksək keyfiyyətlə təhvil veririk. Sürət,
+                        təhlükəsizlik və əlçatanlıq bizim əsas prinsiplərimizdir.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Uğurlu Layihə</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Müştəri Məmnuniyyəti</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery section">
+            <h2>Layihələrimiz (Qalereya)</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://picsum.photos/seed/novatech1/600/400" alt="Layihə şəkli 1">
+                </div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/novatech2/600/400" alt="Layihə şəkli 2">
+                </div>
+                <div class="gallery-item"><img src="https://picsum.photos/seed/novatech3/600/400" alt="Layihə şəkli 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <h2>Bizimlə Əlaqə</h2>
+            <form class="contact-form" id="contactForm">
+                <label for="fullname">Ad və Soyad *</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Mubariz Imanov" required>
+
+                <label for="email">Elektron poçt *</label>
+                <input type="email" id="email" name="email" placeholder="example@company-domain.az" required>
+
+                <label for="message">Mesajınız *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Layihəniz barədə qısa məlumat..."
+                    required></textarea>
+
+                <button type="submit" class="btn-primary btn-submit">Göndər</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 NovaTech. Bütün hüquqları qorunur.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
