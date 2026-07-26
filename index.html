@@ -11,75 +11,94 @@
 <body>
 
     <header class="header">
-        <div class="logo">NovaTech</div>
-        <nav class="nav">
-            <a href="#about">Haqqımızda</a>
-            <a href="#gallery">Qalereya</a>
-            <a href="#contact">Əlaqə</a>
+        <div class="header__logo">NovaTech</div>
+        <nav class="header__nav" id="headerNav">
+            <a class="header__nav-link" href="#about">Haqqımızda</a>
+            <a class="header__nav-link" href="#gallery">Qalereya</a>
+            <a class="header__nav-link" href="#contact">Əlaqə</a>
         </nav>
-        <button class="burger" id="burgerBtn">☰</button>
+        <button class="header__burger" id="burgerBtn" aria-label="Menyunu aç" aria-expanded="false">☰</button>
     </header>
 
     <main class="main">
         <section class="hero">
-            <h1>Rəqəmsal Dünyada Sizin Güvənli Tərəfdaşınız</h1>
-            <p>Biz biznesiniz üçün ən innovativ web və mobil həlləri sıfırdan hazırlayırıq.</p>
-            <a href="#contact" class="btn-primary">Bizimlə Əlaqə</a>
+            <h1 class="hero__title">Rəqəmsal Dünyada Sizin Güvənli Tərəfdaşınız</h1>
+            <p class="hero__text">Biz biznesiniz üçün ən innovativ web və mobil həlləri sıfırdan hazırlayırıq.</p>
+            <a href="#contact" class="btn btn--primary">Bizimlə Əlaqə</a>
         </section>
 
         <section id="about" class="about section">
-            <h2>Haqqımızda</h2>
-            <div class="about-content">
+            <h2 class="section__title">Haqqımızda</h2>
+            <div class="about__content">
 
-                <div class="about-text">
-                    <h3>Niyə bizi seçməlisiniz?</h3>
-                    <p>10 ildən artıq təcrübəmizlə layihələrinizi vaxtında və yüksək keyfiyyətlə təhvil veririk. Sürət,
-                        təhlükəsizlik və əlçatanlıq bizim əsas prinsiplərimizdir.</p>
+                <div class="about__text">
+                    <h3 class="about__subtitle">Niyə bizi seçməlisiniz?</h3>
+                    <p class="about__description">10 ildən artıq təcrübəmizlə layihələrinizi vaxtında və yüksək
+                        keyfiyyətlə təhvil veririk. Sürət, təhlükəsizlik və əlçatanlıq bizim əsas prinsiplərimizdir.
+                    </p>
+                    <p class="about__support">
+                        Texniki dəstək və ətraflı sənədləşmə üçün keçid:
+                        <a class="about__support-link"
+                            href="https://novatech.az/support/documentation?ref=footer&utm_source=website&utm_medium=about-section&utm_campaign=customer-support-2026&session=a839f7c2d9e14b0aa2f5e6c7d8b9a0e1&lang=az-AZ"
+                            target="_blank" rel="noopener noreferrer">
+                            https://novatech.az/support/documentation?ref=footer&utm_source=website&utm_medium=about-section&utm_campaign=customer-support-2026&session=a839f7c2d9e14b0aa2f5e6c7d8b9a0e1&lang=az-AZ
+                        </a>
+                    </p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="stat-number">150+</span>
-                        <span class="stat-label">Uğurlu Layihə</span>
+                <div class="about__stats">
+                    <div class="card">
+                        <span class="card__number">150+</span>
+                        <span class="card__label">Uğurlu Layihə</span>
                     </div>
-                    <div class="stat-card">
-                        <span class="stat-number">99%</span>
-                        <span class="stat-label">Müştəri Məmnuniyyəti</span>
+                    <div class="card">
+                        <span class="card__number">99%</span>
+                        <span class="card__label">Müştəri Məmnuniyyəti</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="gallery" class="gallery section">
-            <h2>Layihələrimiz (Qalereya)</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://picsum.photos/seed/novatech1/600/400" alt="Layihə şəkli 1">
+            <h2 class="section__title">Layihələrimiz (Qalereya)</h2>
+            <div class="gallery__grid">
+                <div class="gallery__item gallery__item--1">
+                    <img class="gallery__image" src="https://picsum.photos/seed/novatech1/600/400" alt="Layihə şəkli 1">
                 </div>
-                <div class="gallery-item"><img src="https://picsum.photos/seed/novatech2/600/400" alt="Layihə şəkli 2">
+                <div class="gallery__item gallery__item--2">
+                    <img class="gallery__image" src="https://picsum.photos/seed/novatech2/600/400" alt="Layihə şəkli 2">
                 </div>
-                <div class="gallery-item"><img src="https://picsum.photos/seed/novatech3/600/400" alt="Layihə şəkli 3">
+                <div class="gallery__item gallery__item--3">
+                    <img class="gallery__image" src="https://picsum.photos/seed/novatech3/600/400" alt="Layihə şəkli 3">
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact section">
-            <h2>Bizimlə Əlaqə</h2>
-            <form class="contact-form" id="contactForm">
-                <label for="fullname">Ad və Soyad *</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Mubariz Imanov" required>
+            <h2 class="section__title">Bizimlə Əlaqə</h2>
+            <form class="form" id="contactForm" novalidate>
+                <label class="form__label" for="fullname">Ad və Soyad *</label>
+                <input class="form__input" type="text" id="fullname" name="fullname" placeholder="Mubariz Imanov"
+                    required>
+                <span class="form__error" id="fullnameError" aria-live="polite"></span>
 
-                <label for="email">Elektron poçt *</label>
-                <input type="email" id="email" name="email" placeholder="example@company-domain.az" required>
+                <label class="form__label" for="email">Elektron poçt *</label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="example@company-domain.az"
+                    required>
+                <span class="form__error" id="emailError" aria-live="polite"></span>
 
-                <label for="message">Mesajınız *</label>
-                <textarea id="message" name="message" rows="5" placeholder="Layihəniz barədə qısa məlumat..."
-                    required></textarea>
-                <button type="submit" class="btn-primary btn-submit">Göndər</button>
+                <label class="form__label" for="message">Mesajınız *</label>
+                <textarea class="form__textarea" id="message" name="message" rows="5"
+                    placeholder="Layihəniz barədə qısa məlumat..." required></textarea>
+                <span class="form__error" id="messageError" aria-live="polite"></span>
+
+                <button type="submit" class="btn btn--primary form__submit">Göndər</button>
+                <p class="form__success" id="formSuccess" aria-live="polite"></p>
             </form>
         </section>
     </main>
 
     <footer class="footer">
-        <p>© 2026 NovaTech. Bütün hüquqları qorunur.</p>
+        <p class="footer__text">© 2026 NovaTech. Bütün hüquqları qorunur.</p>
     </footer>
 
     <script src="script.js"></script>
