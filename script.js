@@ -6,10 +6,33 @@ burgerBtn.addEventListener('click', () => {
     burgerBtn.setAttribute('aria-expanded', String(isOpen));
 });
 
+// Nav linklərə klik: menyunu bağla + smooth scroll et
 nav.querySelectorAll('.header__nav-link').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // menyunu bağla
         nav.classList.remove('header__nav--open');
         burgerBtn.setAttribute('aria-expanded', 'false');
+
+        // smooth scroll (JS ilə özümüz idarə edirik)
+        const targetId = link.getAttribute('href');
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+// Hero bölməsindəki "Bizimlə Əlaqə" düyməsi üçün də smooth scroll
+document.querySelectorAll('a.btn[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
 });
 
